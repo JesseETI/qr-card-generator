@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <title>QR Card Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="QRWrapper">
+        <div id="QRFunctions">
+          <label for="QRInput" class="sr-only"
+            >Enter your website, phone or link here</label
+          >
+          <input
+            type="text"
+            data-testid="inputQRCode"
+            id="QRInput"
+            placeholder="Enter your website, phone or link here"
+          />
+          <button
+            data-testid="buttonQRCardDownload"
+            id="downloadQRCardButton"
+            aria-label="Download QR card"
+          >
+            Download
+          </button>
+        </div>
+        <div class="QRCard" role="region" aria-label="Your QR Card">
+          <div id="QRCode" alt="QR code wrapper"></div>
+          <div id="QRText">
+            <h1 contenteditable="true" spellcheck="false">
+              Visit My GitHub Profile
+            </h1>
+            <p contenteditable="true" spellcheck="false">
+              Scan the QR code to visit my GitHub profile and browse through
+              projects that I've done
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      Inspired by
+      <a
+        href="https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H"
+        target="_blank"
+        aria-label="Learn more about the QR code component challenge by Frontend Mentor"
+        >Frontend Mentor - QR Code Component Challenge</a
+      >. Coded by
+      <a
+        href="https://github.com/JesseETI"
+        target="_blank"
+        aria-label="Check out my GitHub profile"
+        >Jesse E.</a
+      >
+    </footer>
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script src="./src/generateQR.js"></script>
+    <script src="./src/downloadQRCard.js"></script>
+  </body>
+</html>
