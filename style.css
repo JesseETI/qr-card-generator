@@ -160,9 +160,10 @@ footer a:visited {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 500px) {
+  #QRFunctions,
   .QRCard {
-    width: 300px;
+    width: 325px;
   }
 
   #QRFunctions {
@@ -170,7 +171,7 @@ footer a:visited {
   }
 
   #QRFunctions input {
-    flex: 2 1 60%;
+    flex: 2 1 70%;
   }
   #QRFunctions button {
     flex: 1 1 30%;
